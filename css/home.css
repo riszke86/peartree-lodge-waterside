@@ -1,0 +1,572 @@
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 4, 8, 0.92) 0%,
+            rgba(36, 7, 16, 0.65) 48%,
+            rgba(17, 17, 17, 0.25) 100%
+        ),
+        url("../images/hero/hotel-hero.jpg") center / cover no-repeat,
+        var(--colour-burgundy-dark);
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.22) 0%,
+            transparent 45%,
+            rgba(0, 0, 0, 0.38) 100%
+        );
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(100% - 3rem, var(--container-width));
+
+    margin-inline: auto;
+    padding-top: 7rem;
+}
+
+
+.hero-eyebrow {
+    margin-bottom: 1.5rem;
+
+    color: var(--colour-gold);
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+
+.hero h1 {
+    max-width: 850px;
+
+    color: var(--colour-white);
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: var(--colour-gold);
+}
+
+
+.hero-description {
+    max-width: 630px;
+
+    margin-top: 1.7rem;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 1.05rem;
+}
+
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 2.2rem;
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    right: 4%;
+    bottom: 3rem;
+
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    color: var(--colour-white);
+
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+
+.scroll-line {
+    width: 1px;
+    height: 55px;
+
+    background: linear-gradient(
+        to bottom,
+        var(--colour-gold),
+        transparent
+    );
+}
+
+
+/* ================= HIGHLIGHTS ================= */
+
+.hotel-highlights {
+    position: relative;
+    z-index: 5;
+
+    background-color: var(--colour-burgundy);
+}
+
+
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    width: min(100% - 3rem, var(--container-width));
+
+    margin-inline: auto;
+}
+
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    min-height: 125px;
+
+    padding: 1.5rem;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+
+    color: var(--colour-white);
+}
+
+
+.highlight-item:last-child {
+    border-right: 0;
+}
+
+
+.highlight-number,
+.highlight-icon {
+    color: var(--colour-gold);
+
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.highlight-icon {
+    font-size: 1.4rem;
+}
+
+
+.highlight-item p {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome-section {
+    padding-block: 8rem;
+
+    background-color: var(--colour-white);
+}
+
+
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 7rem;
+}
+
+
+.welcome-image-wrapper {
+    position: relative;
+
+    min-height: 580px;
+}
+
+
+.welcome-image-placeholder {
+    position: absolute;
+    inset: 0 45px 45px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--colour-light-grey),
+            var(--colour-cream)
+        );
+
+    box-shadow: var(--shadow-soft);
+
+    color: var(--colour-grey);
+
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+.welcome-image-accent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1;
+
+    width: 55%;
+    height: 55%;
+
+    background-color: var(--colour-burgundy);
+}
+
+
+.welcome-content h2 {
+    margin-bottom: 1.7rem;
+}
+
+
+.welcome-content p:not(.section-label) {
+    margin-bottom: 1.2rem;
+
+    color: var(--colour-grey);
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 4rem;
+
+    margin-bottom: 3.5rem;
+}
+
+
+.section-introduction {
+    max-width: 450px;
+
+    color: var(--colour-grey);
+}
+
+
+/* ================= ROOMS ================= */
+
+.rooms-section {
+    padding-block: 8rem;
+
+    background-color: var(--colour-cream);
+}
+
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.room-card {
+    overflow: hidden;
+
+    background-color: var(--colour-white);
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.room-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 24px 55px rgba(17, 17, 17, 0.14);
+}
+
+
+.room-card-image {
+    position: relative;
+
+    min-height: 280px;
+
+    background-position: center;
+    background-size: cover;
+}
+
+
+.room-image-one {
+    background:
+        linear-gradient(
+            rgba(67, 13, 28, 0.12),
+            rgba(67, 13, 28, 0.12)
+        ),
+        linear-gradient(
+            135deg,
+            #d3c5c1,
+            #f0e8e4
+        );
+}
+
+
+.room-image-two {
+    background:
+        linear-gradient(
+            rgba(67, 13, 28, 0.12),
+            rgba(67, 13, 28, 0.12)
+        ),
+        linear-gradient(
+            135deg,
+            #bca9a4,
+            #e8dcda
+        );
+}
+
+
+.room-image-three {
+    background:
+        linear-gradient(
+            rgba(67, 13, 28, 0.12),
+            rgba(67, 13, 28, 0.12)
+        ),
+        linear-gradient(
+            135deg,
+            #c9b7b0,
+            #eee6e2
+        );
+}
+
+
+.room-card-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    padding: 0.45rem 0.8rem;
+
+    background-color: var(--colour-burgundy);
+
+    color: var(--colour-white);
+
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+.room-card-content {
+    padding: 2rem;
+}
+
+
+.room-card-type {
+    margin-bottom: 0.5rem;
+
+    color: var(--colour-burgundy);
+
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+
+.room-card-content h3 {
+    margin-bottom: 1rem;
+}
+
+
+.room-card-content > p:not(.room-card-type) {
+    color: var(--colour-grey);
+}
+
+
+.room-features {
+    display: grid;
+    gap: 0.55rem;
+
+    margin-top: 1.4rem;
+}
+
+
+.room-features li {
+    position: relative;
+
+    padding-left: 1.2rem;
+
+    color: var(--colour-charcoal);
+
+    font-size: 0.86rem;
+}
+
+
+.room-features li::before {
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background-color: var(--colour-burgundy);
+
+    content: "";
+}
+
+
+/* ================= BOOKING ================= */
+
+.booking-section {
+    position: relative;
+
+    padding-block: 7rem;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--colour-burgundy-dark),
+            var(--colour-black)
+        );
+
+    color: var(--colour-white);
+}
+
+
+.booking-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(194, 161, 107, 0.16),
+            transparent 35%
+        );
+}
+
+
+.booking-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.booking-content h2 {
+    max-width: 750px;
+
+    color: var(--colour-white);
+}
+
+
+.booking-content > p:not(.section-label) {
+    max-width: 650px;
+
+    margin-top: 1.3rem;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr auto;
+    gap: 1rem;
+
+    margin-top: 3rem;
+    padding: 1.4rem;
+
+    background-color: var(--colour-white);
+
+    box-shadow: var(--shadow-soft);
+}
+
+
+.booking-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+
+.booking-field label {
+    color: var(--colour-burgundy);
+
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+.booking-field input,
+.booking-field select {
+    width: 100%;
+    min-height: 48px;
+
+    border: 0;
+    border-bottom: 1px solid var(--colour-light-grey);
+
+    background-color: transparent;
+
+    color: var(--colour-charcoal);
+
+    outline: none;
+}
+
+
+.button-booking {
+    align-self: end;
+
+    min-height: 52px;
+
+    background-color: var(--colour-burgundy);
+
+    color: var(--colour-white);
+}
+
+
+.button-booking:hover {
+    background-color: var(--colour-burgundy-dark);
+}
